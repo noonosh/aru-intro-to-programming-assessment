@@ -2,6 +2,8 @@
 
 _Module code: 2021 MOD003212 TRI1 F01CAM_
 
+[- Github](https://github.com/nuriddinislamov/aru-intro-to-programming-assessment)
+
 ### About the program
 
 This CLI application was developed to fulfill the assessment's requirements and does not represent an actual company or service.
