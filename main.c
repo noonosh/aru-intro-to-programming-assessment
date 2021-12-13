@@ -26,8 +26,8 @@ unsigned short modelPerSale[MAX_SALES];
 bool discountsPerSale[MAX_SALES];
 char customerNames[MAX_SALES][201];
 
-float carPrices[] = { 45000.00, 32000.00, 60000.00 };
-char modelNames[][20] = { "Tesla", "Hyundai", "Toyota" };
+float carPrices[] = { 45000.00, 32000.00, 60000.00, 55000.00 };
+char modelNames[][10] = { "Tesla", "Hyundai", "Toyota", "BMW" };
 
 
 #define FILE_OPENED 0
@@ -242,7 +242,7 @@ unsigned short menu_checkIfDiscountIsNeeded(unsigned short age) {
 		return TRUE;
 	}
 	else {
-		char nusCardResponse = getCharFromConsole("\nDo you have an NUS card ? Answer 'y' or 'n' : ");
+		char nusCardResponse = getCharFromConsole("\nDo you have an Epic Cars' 20%% gift wowcher? Answer 'y' or 'n' : ");
 
 		if (nusCardResponse == 'y') {
 			return TRUE;
@@ -282,7 +282,7 @@ void menu_buyCars() {
 
 	getStringFromConsole("What is your name? Name: ", &customerNames[numberOfSales]);
 
-	carsToBuy = getUnsignedShortFromConsole("How many cars do you want to purchase? Amount: ");
+	carsToBuy = getUnsignedShortFromConsole("How many cars do you want to purchase? Enter a number: ");
 
 	if (carsInStock < carsToBuy) {
 		printf("Sorry, there are fewer cars left than you need.");
@@ -359,7 +359,7 @@ void menu_viewSales() {
 
 
 void exitStore() {
-   printf("Thank you for visiting Epic Cars! See around in a soon time, and Merry Christmas! ;)");
+   printf("Thank you for visiting Epic Cars! See you around in a soon time, and Merry Christmas! ;)");
    saveDataToFile();
 }
 

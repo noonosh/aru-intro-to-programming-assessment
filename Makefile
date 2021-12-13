@@ -1,5 +1,5 @@
 CC = gcc
 
 all: main.c
-	@${CC} main.c -o main -lcurl
+	@${CC} main.c -o main
 	@./main	
